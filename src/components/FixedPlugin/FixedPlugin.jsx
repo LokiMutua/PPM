@@ -23,6 +23,7 @@ import imagine1 from "assets/img/sidebar-1.jpg";
 import imagine2 from "assets/img/sidebar-2.jpg";
 import imagine3 from "assets/img/sidebar-3.jpg";
 import imagine4 from "assets/img/sidebar-4.jpg";
+import pilonImage from "assets/img/elictric-pilon-1236033.jpg"
 
 class FixedPlugin extends Component {
   constructor(props) {
@@ -156,15 +157,15 @@ class FixedPlugin extends Component {
                 <img src={imagine2} alt="..." />
               </a>
             </li>
-            <li className={this.state["bgImage"] === imagine3 ? "active" : ""}>
+            <li className={this.state["bgImage"] === pilonImage ? "active" : ""}>
               <a
                 className="img-holder switch-trigger"
                 onClick={() => {
-                  this.setState({ bgImage: imagine3 });
-                  this.props.handleImageClick(imagine3);
+                  this.setState({ bgImage: pilonImage });
+                  this.props.handleImageClick(pilonImage);
                 }}
               >
-                <img src={imagine3} alt="..." />
+                <img src={pilonImage} alt="..." />
               </a>
             </li>
             <li className={this.state["bgImage"] === imagine4 ? "active" : ""}>

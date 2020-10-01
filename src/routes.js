@@ -22,7 +22,10 @@ import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
 import Notifications from "views/Notifications.jsx";
-import Upgrade from "views/Upgrade.jsx";
+import Projects from "views/Projects.jsx";
+import Milestones from "views/Milestones.jsx";
+import Contractors from "views/Contrators.jsx";
+import Donors from "views/Donors.jsx"
 
 const dashboardRoutes = [
   {
@@ -40,24 +43,24 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/table",
+    path: "/projects",
     name: "Projects",
     icon: "pe-7s-note2",
-    component: TableList,
+    component: Projects,
     layout: "/admin"
   },
   {
-    path: "/typography",
+    path: "/milestones",
     name: "Project Milestones",
-    icon: "pe-7s-news-paper",
-    component: Typography,
+    icon: "pe-7s-graph1",
+    component: Milestones,
     layout: "/admin"
   },
   {
-    path: "/icons",
+    path: "/contractors",
     name: "Contractors",
-    icon: "pe-7s-science",
-    component: Icons,
+    icon: "pe-7s-cart",
+    component: Contractors,
     layout: "/admin"
   },
   {
@@ -66,22 +69,14 @@ const dashboardRoutes = [
     icon: "pe-7s-map-marker",
     component: Maps,
     layout: "/admin"
+  },
+  {
+    path: "/donors",
+    name: "Donors",
+    icon: "pe-7s-cash",
+    component: Donors,
+    layout: "/admin"
   }
-  // {
-  //   path: "/notifications",
-  //   name: "Notifications",
-  //   icon: "pe-7s-bell",
-  //   component: Notifications,
-  //   layout: "/admin"
-  // },
-  // {
-  //   upgrade: true,
-  //   path: "/upgrade",
-  //   name: "Upgrade to PRO",
-  //   icon: "pe-7s-rocket",
-  //   component: Upgrade,
-  //   layout: "/admin"
-  // }
 ];
 
 export default dashboardRoutes;

@@ -22,13 +22,12 @@ import NotificationSystem from "react-notification-system";
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
 
-import image from "assets/img/sidebar-3.jpg";
+import image from "assets/img/elictric-pilon-1236033.jpg";
 
 class Admin extends Component {
   constructor(props) {
@@ -64,8 +63,7 @@ class Admin extends Component {
       title: <span data-notify="icon" className="pe-7s-gift" />,
       message: (
         <div>
-          Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for
-          every web developer.
+          Welcome to <b>Project monitoring</b> - a system we use to manage our projects.
         </div>
       ),
       level: level,
@@ -146,8 +144,7 @@ class Admin extends Component {
       title: <span data-notify="icon" className="pe-7s-gift" />,
       message: (
         <div>
-          Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for
-          every web developer.
+          Welcome to <b>Project monitoring</b> - a system we use to manage our projects.
         </div>
       ),
       level: level,
@@ -183,7 +180,7 @@ class Admin extends Component {
           />
           <Switch>{this.getRoutes(routes)}</Switch>
           <Footer />
-          <FixedPlugin
+          {/* <FixedPlugin
             handleImageClick={this.handleImageClick}
             handleColorClick={this.handleColorClick}
             handleHasImage={this.handleHasImage}
@@ -192,7 +189,7 @@ class Admin extends Component {
             mini={this.state["mini"]}
             handleFixedClick={this.handleFixedClick}
             fixedClasses={this.state.fixedClasses}
-          />
+          /> */}
         </div>
       </div>
     );

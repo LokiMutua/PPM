@@ -266,14 +266,14 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Salary", "Country", "City"];
+const thArray = ["ID", "PH Ref Number", "Implementing agency", "Project Cost","Project County", "Project COnstituency"];
 const tdArray = [
-  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-  ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-  ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-  ["4", "Philip Chaney", "$38,735", "Korea, South", "Overland Park"],
-  ["5", "Doris Greene", "$63,542", "Malawi", "Feldkirchen in Kärnten"],
-  ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
+  ["1", "45", "Dakota Rice", "Ksh 36,738", "Nairobi", "Starehe"],
+  ["2", "456", "Minerva Hooper", "Ksh 23,789", "Kiambu", "Murungaru"],
+  ["3", "344", "Sage Rodriguez", "Ksh 56,142", "Nakuru", "Nakuru East"],
+  ["4", "234", "Philip Chaney", "Ksh 38,735", "Kisumu", "Dunga beach"],
+  ["5", "334", "Doris Greene", "Ksh 63,542", "Turkana", "Oloika"],
+  ["6", "345", "Mason Porter", "Ksh 78,615", "Mombasa", "Watamu"]
 ];
 
 //

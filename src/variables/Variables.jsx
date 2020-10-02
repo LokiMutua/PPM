@@ -497,21 +497,21 @@ var dataPie = {
   series: [40, 20, 40]
 };
 var legendPie = {
-  names: ["Open", "Bounce", "Unsubscribe"],
+  names: ["Open", "Closed", "Pending"],
   types: ["info", "danger", "warning"]
 };
 
 // Data for Line Chart
 var dataSales = {
   labels: [
-    "9:00AM",
-    "12:00AM",
-    "3:00PM",
-    "6:00PM",
-    "9:00PM",
-    "12:00PM",
-    "3:00AM",
-    "6:00AM"
+    "1 Jul",
+    "1 Aug",
+    "1 Sept",
+    "1 Oct",
+    "1 Nov",
+    "1 Dec",
+    "1 Jan",
+    "1 Feb"
   ],
   series: [
     [287, 385, 490, 492, 554, 586, 698, 695],
@@ -548,7 +548,7 @@ var responsiveSales = [
   ]
 ];
 var legendSales = {
-  names: ["Open", "Click", "Click Second Time"],
+  names: ["Olkaria 1", "Menengai Geo", "Tororo - Naivasha Power Line"],
   types: ["info", "danger", "warning"]
 };
 

@@ -3,13 +3,34 @@ import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
 import { trProjects, tdProjects } from "variables/Data.jsx";
+import Button from "components/CustomButton/CustomButton.jsx";
+import NewForm from "components/Modal/FormModal.jsx";
 
 class Projects extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { show: false }
+    }
+
+    handleClick = () => {
+        this.setState((state)=> {
+            return {show: !state.show};
+        })
+    }
+
     render() {
+        const {show} = this.state;
+
         return (
             <div className="content">
+                <NewForm show={show} handleClick={this.handleClick} />
                 <Grid fluid>
                     <Row>
+                        <Col md={12} className="mb-1">
+                            <Button bsStyle="info" fill type="button" onClick={this.handleClick}>
+                                Create Project
+                    </Button>
+                        </Col>
                         <Col md={12}>
                             <Card
                                 title="Projects"
@@ -27,11 +48,14 @@ class Projects extends Component {
                                         </thead>
                                         <tbody>
                                             {tdProjects.map((prop, key) => {
+                                                let id = prop[0];
                                                 return (
                                                     <tr key={key}>
                                                         {prop.map((prop, key) => {
                                                             return <td key={key}>{prop}</td>;
                                                         })}
+                                                        <td><Button data-id={id} onClick={this.handleClick}>Edit</Button></td>
+                                                        <td><Button data-id={id} >Delete</Button></td>
                                                     </tr>
                                                 );
                                             })}

@@ -46,7 +46,7 @@ class Dashboard extends Component {
             <Col lg={3} sm={6}>
               <StatsCard
                 bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Project Milestones"
+                statsText="Milestones"
                 statsValue="80%"
                 statsIcon={<i className="fa fa-calendar-o" />}
                 statsIconText="Last day"
@@ -76,8 +76,8 @@ class Dashboard extends Component {
               <Card
                 statsIcon="fa fa-history"
                 id="chartHours"
-                title="Users Behavior"
-                category="24 Hours performance"
+                title="Project Progress"
+                category="Q1 Project Progress"
                 stats="Updated 3 minutes ago"
                 content={
                   <div className="ct-chart">
@@ -97,9 +97,9 @@ class Dashboard extends Component {
             <Col md={4}>
               <Card
                 statsIcon="fa fa-clock-o"
-                title="Email Statistics"
-                category="Last Campaign Performance"
-                stats="Campaign sent 2 days ago"
+                title="Project statistics"
+                category="Project progress in last 4 months"
+                stats="Results sent 2 days ago"
                 content={
                   <div
                     id="chartPreferences"

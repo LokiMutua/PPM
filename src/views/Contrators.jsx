@@ -12,7 +12,7 @@ class Contractors extends Component {
                     <Row>
                         <Col md={12}>
                             <Card
-                                title="Projects"
+                                title="Contrators"
                                 //category="Here is a subtitle for this table"
                                 ctTableFullWidth
                                 ctTableResponsive

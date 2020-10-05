@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router";
+import { Link } from "react-router-dom";
 import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
 import { trProjects, tdProjects } from "variables/Data.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 import NewForm from "components/Modal/FormModal.jsx";
+import ProjectDetails from "./ProjectDetails.jsx"
 
 class Projects extends Component {
     constructor(props) {
@@ -13,17 +16,17 @@ class Projects extends Component {
     }
 
     handleClick = () => {
-        this.setState((state)=> {
-            return {show: !state.show};
+        this.setState((state) => {
+            return { show: !state.show };
         })
     }
 
     render() {
-        const {show} = this.state;
+        const { show } = this.state;
 
         return (
             <div className="content">
-                <NewForm show={show} handleClick={this.handleClick} />
+                <NewForm show={show} handleClick={this.handleClick}  />
                 <Grid fluid>
                     <Row>
                         <Col md={12} className="mb-1">
@@ -41,21 +44,20 @@ class Projects extends Component {
                                     <Table striped hover>
                                         <thead>
                                             <tr>
-                                                {trProjects.map((prop, key) => {
+                                                {trProjects.slice(0, 10).map((prop, key) => {
                                                     return <th key={key}>{prop}</th>;
                                                 })}
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {tdProjects.map((prop, key) => {
-                                                let id = prop[0];
+                                            {tdProjects.slice(0, 6).map((prop, key) => {
+                                                let url = '/admin/projects/' + prop[0];
                                                 return (
                                                     <tr key={key}>
-                                                        {prop.map((prop, key) => {
+                                                        {prop.slice(0, 10).map((prop, key) => {
                                                             return <td key={key}>{prop}</td>;
                                                         })}
-                                                        <td><Button data-id={id} onClick={this.handleClick}>Edit</Button></td>
-                                                        <td><Button data-id={id} >Delete</Button></td>
+                                                        <td><Link to={url} className="btn btn-info" >View</Link></td>
                                                     </tr>
                                                 );
                                             })}
@@ -76,16 +78,16 @@ class Projects extends Component {
                                     <Table hover>
                                         <thead>
                                             <tr>
-                                                {trProjects.map((prop, key) => {
+                                                {trProjects.slice(0, 10).map((prop, key) => {
                                                     return <th key={key}>{prop}</th>;
                                                 })}
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {tdProjects.map((prop, key) => {
+                                            {tdProjects.slice(6, 9).map((prop, key) => {
                                                 return (
                                                     <tr key={key}>
-                                                        {prop.map((prop, key) => {
+                                                        {prop.slice(0, 10).map((prop, key) => {
                                                             return <td key={key}>{prop}</td>;
                                                         })}
                                                     </tr>
@@ -101,6 +103,21 @@ class Projects extends Component {
             </div>
         );
     }
+};
+
+const ProjectsRoutes = () => {
+    return (
+        <div>
+            <Switch>
+                <Route exact path="/admin/projects" >
+                    <Projects />
+                </Route>
+                <Route exact path="/admin/projects/:id">
+                    <ProjectDetails />
+                </Route>
+            </Switch>
+        </div>
+    )
 }
 
-export default Projects;
+export default ProjectsRoutes;

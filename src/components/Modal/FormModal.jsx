@@ -13,6 +13,7 @@ import {
 import { Card } from "components/Card/Card.jsx";
 import { FormInputs } from "components/FormInputs/FormInputs.jsx";
 import { UserCard } from "components/UserCard/UserCard.jsx";
+import NewProject from "components/Project/NewProject.jsx";
 
 const ProjectForm = () => {
     return (
@@ -134,7 +135,7 @@ function NewForm(props) {
                 <Modal.Title>Create a new Project</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <ProjectForm />
+                <NewProject />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={props.handleClick}>

@@ -254,11 +254,12 @@ export const challenges = [
     [2, "No engineers", "Hire more", "We sgould train more engineers", true]
 ]
 
-export const implementing_agency = ['KPLC', 'KETRACO', 'EPRA', 'KEYRACO', 'REREC',
+export const implementing_agency = ['Select', 'KPLC', 'KETRACO', 'EPRA', 'KEYRACO', 'REREC',
     'GDC', 'NUPEA', 'MINISTRY']
 export const fit_options = ["N/A", "FIT", "NON FIT"]
 
 export const counties = {
+    'Select':[],
     'Baringo': ['Baringo Central', 'Baringo South', 'Baringo North', 'Eldama Ravine', 'Mogotio', 'Tiaty'],
     'Bomet': ['Bomet Central', 'Bomet East', 'Chepalungu', 'Sotik Konoin'],
     'Bungoma': ['Bumula ', 'Kabuchai ', 'Kanduyi ', 'Kimilili ', 'Mt. Elgon ', 'Sirisia ', 'Tongaren ', 'Webuye West ', 'Webuye East Constituency'],

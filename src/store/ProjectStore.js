@@ -1,5 +1,5 @@
 import { observable, action, decorate } from "mobx";
-// import { Auth } from "../helper";
+import { Project } from "../helpers/Api.js";
 
 class ProjectStore {
   loading = false;
@@ -61,33 +61,32 @@ class ProjectStore {
       this.errors = { "unknown": error.message };
     }
   }
-  // addProject() {
-  //   this.loading = true;
-  //   this.errors = {};
-  //   return Auth.register(
-  //     this.userDetails.firstName,
-  //     this.userDetails.lastName,
-  //     this.userDetails.email,
-  //     this.userDetails.password
-  //   )
-  //     .then(response => {
-  //       console.log("User registered");
-  //     })
-  //     .catch(
-  //       (error => {
-  //         this.handelErrors(error)
-  //         throw error;
-  //       }
-  //       )
-  //     )
-  //     .finally(
-  //       action(
-  //         () => {
-  //           this.loading = false;
-  //         }
-  //       )
-  //     );
-  // }
+  addProject() {
+    this.loading = true;
+    this.errors = {};
+    return Project.create(
+      this.projectDetails.project_details,
+      this.projectDetails.project_desc,
+      this.projectDetails.finances,
+      this.projectDetails.timelines
+    ).then(response => {
+        console.log("User registered");
+      })
+      .catch(
+        (error => {
+          this.handelErrors(error)
+          throw error;
+        }
+        )
+      )
+      .finally(
+        action(
+          () => {
+            this.loading = false;
+          }
+        )
+      );
+  }
 }
 decorate(ProjectStore, {
   projectDetails: observable,

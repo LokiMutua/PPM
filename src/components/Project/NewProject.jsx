@@ -73,15 +73,7 @@ class NewProject extends Component {
 
     render() {
         const { steps, currentStep } = this.state;
-        let { project, sub_project, implenting_agancy,
-            project_output, project_technology, project_fit_non,
-            project_county, project_constituency } = this.props.ProjectStore.projectDetails.project_details;
-        let detailsDict = {
-            "project": project, "sub_project": sub_project, "implenting_agancy": implenting_agancy,
-            "project_output": project_output, "project_technology": project_technology, "project_fit_non": project_fit_non,
-            "project_county": project_county, "project_constituency": project_constituency
-        }
-        const buttonStyle = { background: '#E0E0E0', width: 200, padding: 16, textAlign: 'center', margin: '0 auto', marginTop: 32 };
+        // const buttonStyle = { background: '#E0E0E0', width: 200, padding: 16, textAlign: 'center', margin: '0 auto', marginTop: 32 };
 
         return (
             <div>
@@ -89,7 +81,6 @@ class NewProject extends Component {
                 <form>
                     {currentStep === 0 && (
                         <ProjectDetails
-                            // detailsDict={detailsDict}
                             projectStore={ProjectStore}
                         />
                     )}

@@ -26,16 +26,35 @@ function FieldGroup({ label, ...props }) {
     </FormGroup>
   );
 }
+const OptionGroup = ({ label, options, ...props }) => {
+  return (
+    <FormGroup>
+      <ControlLabel>{label}</ControlLabel>
+      <FormControl {...props}>
+        {options.map((item, key) =>
+          <option key={key} value={item}>{item}</option>
+        )}
+      </FormControl>
+    </FormGroup>
+  )
+}
 
 export class FormInputs extends Component {
   render() {
     var row = [];
     for (var i = 0; i < this.props.ncols.length; i++) {
-      row.push(
-        <div key={i} className={this.props.ncols[i]}>
-          <FieldGroup {...this.props.properties[i]} />
+      if (this.props.properties[i].options) {
+        row.push(<div key={i} className={this.props.ncols[i]}>
+          <OptionGroup {...this.props.properties[i]} />
         </div>
-      );
+        );
+      }else{
+        row.push(
+          <div key={i} className={this.props.ncols[i]}>
+            <FieldGroup {...this.props.properties[i]} />
+          </div>
+        );
+      }
     }
     return <Row>{row}</Row>;
   }

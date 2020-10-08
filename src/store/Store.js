@@ -1,9 +1,7 @@
-import authStore from "../Auth/authStore";
-import userStore from "../User/userStore";
+import ProjectStore from "./ProjectStore.js";
 
 const appStore = {
-    authStore,
-    userStore
+    ProjectStore,
 };
 window._____APP_STATE_____ = appStore;
 

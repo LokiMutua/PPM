@@ -203,52 +203,108 @@ export const project_details = {
     "implementing_agency": ["Implementing Agency", "China 1 way"],
     "ouput": ["Ouput", "Complete"],
     "technology": ["Technology", "Solar power"],
-    "fit_non": ["( Fit, Non Fit,n/a)", "FIT"],
+    "fit_non": ["Fit/Non Fit", "FIT"],
     "county": ["County", "Nakuru"],
     "constituency": ["Constituency", "Naivasha"]
 };
 export const project_desc = {
-    "project_location": ["PROJECT LOCATION", "-43.886120, -57.553383"],
-    "scope_description": ["PROJECT SCOPE/ DESCRIPTION", "Only working with monitoring"],
-    "benefit": ["BENEFIT", "Improve on power pofomance"],
-    "finciers": ["FINANCIER(S)", "Gorverment of France", "Gorverment of China", "Treasury"],
-    "consultant": ["CONSULTANT", "Dennis Kamau"],
-    "contractor": ["CONTRACTOR", "Eng, Mike Sonko"]
+    "project_location": ["Location", "-43.886120, -57.553383"],
+    "scope_description": ["Scope/Description", "Only working with monitoring"],
+    "benefit": ["Benefit", "Improve on power pofomance"],
+    "finciers": ["Financier(s)", "Gorverment of France", "Gorverment of China", "Treasury"],
+    "consultant": ["Consultant", "Dennis Kamau"],
+    "contractor": ["Contractor", "Eng, Mike Sonko"]
 }
 export const finances = {
-    "foreign": ["FOREIGN FUNDING (KES MIL)", "405"],
-    "gok": ["GOK FUNDING (KES MIL)", 90],
-    "direct": ["DIRECT LOAN(KES MIL)", 67],
-    "other": ["OTHER CONTRIBUTION (KES MIL)", 89],
-    "approved": ["APPROVED VARIATION(KES MIL)", true],
-    "cumulative_expenditure": ["CUMULATIVE EXPENDITURE(KES MIL)", 456],
-    "allocation": ["ALLOCATION FY 2019/2020 (KES MIL)", 678],
-    "actual_expenditure": ["ACTUAL EXPENDITURE FY 2019/2020 (KES MIL)", 45],
-    "balance": ["BALANCE FY 2019/2020(KES MIL)", 83]
+    "foreign": ["Foreign Funding (Kes Mil)", "405"],
+    "gok": ["Gok Funding (Kes Mil)", 90],
+    "direct": ["Direct Loan(Kes Mil)", 67],
+    "other": ["Other Contribution (Kes Mil)", 89],
+    "approved": ["Approved Variation(Kes Mil)", true],
+    "cumulative_expenditure": ["Cumulative Expenditure(Kes Mil)", 456],
+    "allocation": ["Allocation FY 2019/2020 (Kes Mil)", 678],
+    "actual_expenditure": ["Actual Expenditure FY 2019/2020 (Kes Mil)", 45],
+    "balance": ["Balance FY 2019/2020(Kes Mil)", 83]
 }
 export const timelines = {
-    "start_date": ["START DATE", "07/05/2020"],
-    "initial_completion": ["INNITIAL COMPLETION DATE", "09/4/2020"],
-    "revised_completion": ["REVISED COMPLETION DATE", "09/09/2020"],
-    "actual_completion": ["ACTUAL COMPLETION DATE", "04/09/2020"]
+    "start_date": ["Start Date", "07/05/2020"],
+    "initial_completion": ["Innitial Completion Date", "09/4/2020"],
+    "revised_completion": ["Revised Completion Date", "09/09/2020"],
+    "actual_completion": ["Actual Completion Date", "04/09/2020"]
 }
 
-export const major_milestones_headers = ["ID", "Name", "Status"]
-export const major_milestones = [['1', 'Land acquisition ', ""],
-['2', 'Feasibility Study', 'Complete'],
-['3', 'Env. Impact Assessment', 'Done and Approved'],
-['4', 'Drilling and Testing of wells', 'complete.'],
-['5', 'Funding Commitment', "Yes"],
-['6', 'Procurement of Consultant', 'Complete'],
-['7', 'Procurement of Contractor', 'Complete'],
-['8', 'National Treasury Approval', 'Approved'],
-['9', 'Attorney General Approval', 'Approved'],
-['10', 'Lot I (Steamfield DevelopmentWorks', 'Ongoing at 93.25% Complete'],
-['11', 'Lot II (Power Plant - Works', 'Ongoing at 91% Complete'],
-['12', 'Lot III (HV Substation & Transmission Lines- Contractor addressing the Snag list', 'Works completed and TOC issued']]
+export const major_milestones_headers = ["ID", "Name", "Unit", "Target", "Start Date", "End Date", "Status", "% Completion"]
+export const major_milestones = [['1', 'Land acquisition', "Acres", 34, "2020-09-02", '1986-04-22', 20, 65],
+['2', 'Feasibility Study', "Opinion", null, '2018-11-16', '1976-12-18', null, 56],
+['3', 'Env. Impact Assessment', "Opinion", null, '2018-11-16', '1976-12-18', null, 80],
+['4', 'Drilling and Testing of wells', "No. of Wells", 45, '1987-02-21', '1990-02-21', 45, 100],
+['5', 'Funding Commitment', "Opinion", null, '2018-11-16', '1976-12-18', null, 90],
+['6', 'Procurement of Consultant', "No. of Consultants", 5, '1973-02-22', '1980-02-22', 4, 90],
+['7', 'Procurement of Contractor', "No. of Consultants", 10, '1973-02-22', '1980-02-22', 6, 60],
+['8', 'National Treasury Approval', 'Done', 'Yes', '1988-01-17', '1988-01-17', 'Yes', 100],
+['9', 'Attorney General Approval', 'Done', 'No', '1988-01-17', '1988-01-17', 'No', 0],
+['10', 'Lot I (Steamfield DevelopmentWorks', "Opinion", null, '2018-11-16', '1976-12-18', null, 80],
+['11', 'Lot II (Power Plant - Works', "Opinion", null, '2018-11-16', '1976-12-18', null, 80],
+['12', 'Lot III (HV Substation & Transmission \n Lines- Contractor addressing the Snag list', "Opinion", null, '2018-11-16', '1976-12-18', null, 80]]
+
 
 export let challenges_headers = ["ID", "Challenge", "Mitigation", "Remarks", "Resolved"]
 export const challenges = [
     [1, "Not enough money", "Got more fundings", "Let not face this again", false],
     [2, "No engineers", "Hire more", "We sgould train more engineers", true]
 ]
+
+export const implementing_agency = ['Select', 'KPLC', 'KETRACO', 'EPRA', 'KEYRACO', 'REREC',
+    'GDC', 'NUPEA', 'MINISTRY']
+export const fit_options = ["N/A", "FIT", "NON FIT"]
+
+export const counties = {
+    'Select':[],
+    'Baringo': ['Baringo Central', 'Baringo South', 'Baringo North', 'Eldama Ravine', 'Mogotio', 'Tiaty'],
+    'Bomet': ['Bomet Central', 'Bomet East', 'Chepalungu', 'Sotik Konoin'],
+    'Bungoma': ['Bumula ', 'Kabuchai ', 'Kanduyi ', 'Kimilili ', 'Mt. Elgon ', 'Sirisia ', 'Tongaren ', 'Webuye West ', 'Webuye East Constituency'],
+    'Busia': ['Nambale', 'Butula', 'Funyula', 'Budalangi', 'Matayos', 'Teso North', 'Teso South'],
+    'Elgeyo Marakwet': ['Keiyo North', 'Keiyo South', 'Marakwet East', 'Marakwet West Constituency'],
+    'Embu': [],
+    'Garissa': [],
+    'Homabay': [],
+    'Isiolo': [],
+    'Kajiado': [],
+    'Kakamega': [],
+    'Kericho': [],
+    'Kiambu': [],
+    'Kilifi': [],
+    'Kirinyaga': [],
+    'Kisii': [],
+    'Kisumu': [],
+    'Kitui': [],
+    'Kwale': [],
+    'Laikipia': [],
+    'Lamu': [],
+    'Machakos': [],
+    'Makueni': [],
+    'Mandera': [],
+    'Marsabit': [],
+    'Meru': [],
+    'Migori': [],
+    'Mombasa': [],
+    'Murang`a': [],
+    'Nairobi': [],
+    'Nakuru': [],
+    'Nandi': [],
+    'Narok': [],
+    'Nyamira': [],
+    'Nyandarua': [],
+    'Nyeri': [],
+    'Samburu': [],
+    'Siaya': [],
+    'Taita Taveta': [],
+    'Tana River': [],
+    'Trans Nzoia': ['Cherangany', 'Kwanza', 'Saboti ', 'Endebess', 'Kiminini'],
+    'Tharaka Nithi': [],
+    'Turkana': [],
+    'Uasin Gishu': [],
+    'Vihiga': [],
+    'Wajir': [],
+    'West Pokot': []
+}

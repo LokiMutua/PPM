@@ -27,18 +27,20 @@ import "./assets/css/demo.css";
 import "./assets/css/custom.css";
 import "./assets/css/pe-icon-7-stroke.css";
 import 'bootstrap/dist/css/bootstrap.css';
-
-
+import appStore from './store/Store.js'
 import AdminLayout from "layouts/Admin.jsx";
 import ProjectDetails from "./views/ProjectDetails.jsx";
+import { Provider } from "mobx-react";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Route path="/admin/projects/1" component={ProjectDetails}/>
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </BrowserRouter>,
+  <Provider {...appStore}>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+        <Route path="/admin/projects/1" component={ProjectDetails} />
+        <Redirect from="/" to="/admin/dashboard" />
+      </Switch>
+    </BrowserRouter>
+  </Provider >,
   document.getElementById("root")
 );

@@ -17,11 +17,7 @@
 */
 import Dashboard from "views/Dashboard.jsx";
 import UserProfile from "views/UserProfile.jsx";
-import TableList from "views/TableList.jsx";
-import Typography from "views/Typography.jsx";
-import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
-import Notifications from "views/Notifications.jsx";
 import Projects from "views/Projects.jsx";
 import Milestones from "views/Milestones.jsx";
 import Contractors from "views/Contrators.jsx";

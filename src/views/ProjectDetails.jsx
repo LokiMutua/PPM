@@ -12,29 +12,40 @@ import {
   challenges,
   challenges_headers
 } from "./../variables/Data.jsx";
+
+import { Tooltip, OverlayTrigger } from "react-bootstrap";
+import Button from "components/CustomButton/CustomButton.jsx";
+
 class ProjectDetails extends React.Component {
   // let { id } = useParams();
   generate_key_value_data = (data, heading) => {
+    const remove = <Tooltip id="remove_tooltip">Edit</Tooltip>;
     return (
       <div className="card">
-      <table className="table borderless bg-light">
-        <thead className="mx-auto">
-          <tr>
-            <th scope="col" ><b>{heading}</b></th>
-            <th scope="col"><b><i className="fa pe-7s-note pull-right" /></b></th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            Object.keys(data).map((key, index) => (
-              <tr key={index}>
-                <td style={{ borderTop: 'none' }}>{data[key][0]}</td>
-                <td style={{ borderTop: 'none' }}><b>{data[key][1]}</b></td>
-              </tr>
-            ))
-          }
-        </tbody></table>
-        </div>
+        <table className="table borderless bg-light">
+          <thead className="mx-auto">
+            <tr>
+              <th scope="col" ><b>{heading}</b></th>
+              <th scope="col">
+                <OverlayTrigger overlay={remove}>
+                  <Button bsStyle="success" simple type="button" bsSize="xs">
+                    <i className="fa fa-edit" />
+                  </Button>
+                </OverlayTrigger>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              Object.keys(data).map((key, index) => (
+                <tr key={index}>
+                  <td style={{ borderTop: 'none' }}>{data[key][0]}</td>
+                  <td style={{ borderTop: 'none' }}><b>{data[key][1]}</b></td>
+                </tr>
+              ))
+            }
+          </tbody></table>
+      </div>
     )
   }
   render() {
@@ -61,7 +72,7 @@ class ProjectDetails extends React.Component {
 
           </Row>
           <Row>
-            <Col md={6}>
+            <Col md={12}>
               <Card
                 title="Major Milestones"
                 //category="Here is a subtitle for this table"
@@ -92,7 +103,7 @@ class ProjectDetails extends React.Component {
                 }
               />
             </Col>
-            <Col md={6}>
+            <Col md={12}>
               <Card
                 title="Challenges"
                 //category="Here is a subtitle for this table"

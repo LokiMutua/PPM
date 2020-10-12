@@ -119,11 +119,11 @@ class Projects extends Component {
           const { SearchBar, ClearSearchButton } = Search;
 
         return (
-            <div classproject="content">
+            <div className="content">
                 <NewForm show={show} handleClick={this.handleClick}  />
                 <Grid fluid>
                     <Row>
-                        <Col md={12} classproject="mb-1">
+                        <Col md={12} className="mb-1">
                             <Button bsStyle="info" fill type="button" onClick={this.handleClick}>
                                 Create Project
                     </Button>
@@ -162,28 +162,6 @@ class Projects extends Component {
                                       )
                                     }
                                   </ToolkitProvider>
-                                    // <Table striped hover>
-                                    //     <thead>
-                                    //         <tr>
-                                    //             {/* {trProjects.slice(0, 10).map((prop, key) => {
-                                    //                 return <th key={key}>{prop}</th>;
-                                    //             })} */}
-                                    //         </tr>
-                                    //     </thead>
-                                    //     <tbody>
-                                    //         {/* {tdProjects.slice(0, 6).map((prop, key) => {
-                                    //             let url = '/admin/projects/' + prop[0];
-                                    //             return (
-                                    //                 <tr key={key}>
-                                    //                     {prop.slice(0, 10).map((prop, key) => {
-                                    //                         return <td key={key}>{prop}</td>;
-                                    //                     })}
-                                    //                     <td><Link to={url} classproject="btn btn-info" >View</Link></td>
-                                    //                 </tr>
-                                    //             );
-                                    //         })} */}
-                                    //     </tbody>
-                                    // </Table>
                                 }
                             />
                         </Col>
